@@ -32,7 +32,7 @@ public class FileDownLoad {
 
 		    driver.navigate().to("https://file-examples.com/index.php/sample-documents-download/sample-pdf-download/");
 		    driver.findElement(By.xpath("//tbody/tr[1]/td[5]/a[1]")).click();
-		    
+		    driver.quit();
 		
 		
 	}
