@@ -17,6 +17,8 @@ public class FileUploadInSelenium_UsingRobotClass {
 
 	@Test
 	public void TestFU() throws InterruptedException, AWTException {
+		
+		//here uploading file with robot
 		System.setProperty("Webdriver.chrome.driver", "C:\\vykuntam\\chromedriverfolder\\92\\chromedriver_win32 (3)\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver(); 
 		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -33,14 +35,12 @@ public class FileUploadInSelenium_UsingRobotClass {
 		     StringSelection stringSelection = new StringSelection("C:\\Users\\vinay\\Documents\\file.txt");
 		        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 		        clipboard.setContents(stringSelection, null);
-
-
 		        
 		        //imitate mouse events like ENTER, CTRL+C, CTRL+V
 		     Robot robot = new Robot();
 		     robot.delay(250);
 		     
-		     //robot.keyRelease(KeyEvent.VK_ENTER);
+		     
 		     robot.keyPress(KeyEvent.VK_CONTROL);
 		     robot.keyPress(KeyEvent.VK_V);
 		     robot.keyRelease(KeyEvent.VK_V);
